@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>paint/actAxis.PNG</file>
+        <file>paint/actChartSet.PNG</file>
+        <file>paint/actLineSetting.PNG</file>
+        <file>paint/actOriginSize.PNG</file>
+        <file>paint/actQuit.PNG</file>
+        <file>paint/actRefresh.PNG</file>
+        <file>paint/actZoomIn.PNG</file>
+        <file>paint/actZoomOut.PNG</file>
+    </qresource>
+</RCC>
