@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>919</width>
-    <height>448</height>
+    <width>1016</width>
+    <height>764</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,15 +18,15 @@
     <item>
      <widget class="QToolBox" name="toolBox">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>224</width>
-         <height>283</height>
+         <width>248</width>
+         <height>573</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -36,120 +36,348 @@
        <attribute name="label">
         <string>图表设置</string>
        </attribute>
-       <widget class="QLabel" name="label">
+       <widget class="QGroupBox" name="groupBox">
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>20</y>
-          <width>81</width>
-          <height>21</height>
+          <y>190</y>
+          <width>241</width>
+          <height>111</height>
          </rect>
         </property>
-        <property name="text">
-         <string>设置图表标题:</string>
+        <property name="title">
+         <string>标题</string>
         </property>
+        <widget class="QLineEdit" name="editTitle">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>141</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>30</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>设置</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>221</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>设置标题字体</string>
+         </property>
+        </widget>
        </widget>
-       <widget class="QLineEdit" name="editTitle">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>20</y>
-          <width>141</width>
-          <height>20</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QDoubleSpinBox" name="spinMarginLeft">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>60</y>
-          <width>62</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_2">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>56</y>
-          <width>71</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>左偏移量:</string>
-        </property>
-       </widget>
-       <widget class="QDoubleSpinBox" name="spinMarginRight">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>100</y>
-          <width>62</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_3">
+       <widget class="QGroupBox" name="groupBox_2">
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>96</y>
-          <width>71</width>
-          <height>31</height>
+          <y>310</y>
+          <width>241</width>
+          <height>171</height>
          </rect>
         </property>
-        <property name="text">
-         <string>右偏移量:</string>
+        <property name="title">
+         <string>图例</string>
         </property>
+        <widget class="QRadioButton" name="radioButton">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>上 方</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_2">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>20</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>下 方</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>左 侧</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_4">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>60</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>右 侧</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>100</y>
+           <width>71</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>图例可见</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_2">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>100</y>
+           <width>71</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>背景可见</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnLegendFont">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>字体</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>140</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>标签颜色</string>
+         </property>
+        </widget>
        </widget>
-       <widget class="QDoubleSpinBox" name="spinMarginTop">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>140</y>
-          <width>62</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_4">
+       <widget class="QGroupBox" name="groupBox_3">
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>136</y>
-          <width>71</width>
-          <height>31</height>
+          <y>0</y>
+          <width>241</width>
+          <height>181</height>
          </rect>
         </property>
-        <property name="text">
-         <string>上偏移量:</string>
+        <property name="title">
+         <string>边距</string>
         </property>
+        <widget class="QDoubleSpinBox" name="spinMarginLeft">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>20</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>20</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>左 边 距</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>50</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>右 边 距</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="spinMarginRight">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>50</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>80</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>上 边 距</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="spinMarginTop">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>80</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="spinMarginBottom">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>110</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>110</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>下 边 距</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>150</y>
+           <width>191</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>设置边距</string>
+         </property>
+        </widget>
        </widget>
-       <widget class="QDoubleSpinBox" name="spinMarginBottom">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>180</y>
-          <width>62</width>
-          <height>21</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_5">
+       <widget class="QGroupBox" name="groupBox_4">
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>176</y>
-          <width>71</width>
-          <height>31</height>
+          <y>490</y>
+          <width>241</width>
+          <height>91</height>
          </rect>
         </property>
-        <property name="text">
-         <string>下偏移量:</string>
+        <property name="title">
+         <string>动画效果</string>
         </property>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>动 画 效 果</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>71</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>主       题</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>20</y>
+           <width>131</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_2">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>60</y>
+           <width>131</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
        </widget>
       </widget>
       <widget class="QWidget" name="page_2">
@@ -157,8 +385,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>224</width>
-         <height>283</height>
+         <width>248</width>
+         <height>573</height>
         </rect>
        </property>
        <attribute name="icon">
@@ -168,8 +396,260 @@
        <attribute name="label">
         <string>曲线设置</string>
        </attribute>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>241</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>选择操作序列</string>
+        </property>
+        <widget class="QRadioButton" name="radioSeries0">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Sin 曲线</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioSeries1">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>30</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Cos 曲线</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>90</y>
+          <width>241</width>
+          <height>191</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>曲线外观</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>序列名称</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="editSeriesName">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>30</y>
+           <width>141</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="chkSeriesVisible">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>71</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>序列可见</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="chkPointVisible">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>70</y>
+           <width>91</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>数据点可见</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>100</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>曲线颜色</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_8">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>100</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>曲线Pen</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>150</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>透明度</string>
+         </property>
+        </widget>
+        <widget class="QSlider" name="sliderSeriesOpacity">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>150</y>
+           <width>160</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_7">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>300</y>
+          <width>241</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>数据点标签</string>
+        </property>
+        <widget class="QCheckBox" name="chkPointLabelVisible">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>数据点标签可见</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_9">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>标签颜色</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_10">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>100</y>
+           <width>171</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>标签字体</string>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_8">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>201</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>标签格式</string>
+         </property>
+         <widget class="QRadioButton" name="radioButton_7">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>89</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>@yPoint</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_8">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>70</y>
+            <width>151</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>（@xPoint, @yPoint)</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
       </widget>
       <widget class="QWidget" name="page_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>248</width>
+         <height>573</height>
+        </rect>
+       </property>
        <attribute name="icon">
         <iconset resource="res.qrc">
          <normaloff>:/image/paint/actAxis.PNG</normaloff>:/image/paint/actAxis.PNG</iconset>
@@ -177,6 +657,474 @@
        <attribute name="label">
         <string>坐标轴设置</string>
        </attribute>
+       <widget class="QGroupBox" name="groupBox_9">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>241</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>设置坐标轴对象</string>
+        </property>
+        <widget class="QRadioButton" name="radioX">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>X 轴</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioY">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>30</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Y 轴</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_10">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>80</y>
+          <width>241</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>坐标轴总体</string>
+        </property>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>40</y>
+           <width>61</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>最小值</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="spinAxisMin">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>131</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="spinAxisMax">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>80</y>
+           <width>131</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>61</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>最大值</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>120</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>isVisible</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>160</y>
+           <width>201</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>设置坐标轴范围</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_11">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>290</y>
+          <width>241</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>轴标题</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_11">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>设置标题</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="editAxisTitle">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>30</y>
+           <width>141</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="chkBoxAxisTitle">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>isTitleVisible</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_12">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>70</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>设置字体</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_12">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>400</y>
+          <width>241</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>轴刻度标签</string>
+        </property>
+        <widget class="QPushButton" name="btnTickFormat">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>标签格式</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="editAxisLabelFormat">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>20</y>
+           <width>131</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_14">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>文字颜色</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_15">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>60</y>
+           <width>131</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>设置字体</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="chkBoxLabelsVisible">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>100</y>
+           <width>111</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>labelIsVisible</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_4">
+       <attribute name="label">
+        <string>Grid</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_13">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>241</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>GridLine</string>
+        </property>
+        <widget class="QCheckBox" name="chkGridLineVisible">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>30</y>
+           <width>161</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>isGridLineVisible</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_16">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>60</y>
+           <width>201</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>gridLineColor</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_17">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>100</y>
+           <width>201</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>gridLinePen</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_14">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>150</y>
+          <width>241</width>
+          <height>191</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Axis and Ticks</string>
+        </property>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>61</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Tick个数</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinTickCount">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>40</y>
+           <width>141</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="chkAxisLineVisible">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>131</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>isLineVisible</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_18">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>120</y>
+           <width>211</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>linePen</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_19">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>150</y>
+           <width>211</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>linePenColor</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_15">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>350</y>
+          <width>241</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>MinorTick</string>
+        </property>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>91</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>MinorTick个数</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinMinorTickCount">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>30</y>
+           <width>111</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="chkMinorTickVisible">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>171</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>isMinorGridLineVisible</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_20">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>100</y>
+           <width>211</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>minorGridLineColor</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_21">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>130</y>
+           <width>211</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>minorGridLinePen</string>
+         </property>
+        </widget>
+       </widget>
       </widget>
      </widget>
     </item>
@@ -190,7 +1138,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>919</width>
+     <width>1016</width>
      <height>23</height>
     </rect>
    </property>

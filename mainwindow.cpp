@@ -114,3 +114,62 @@ void MainWindow::updateFromChart()
     this->ui->spinMarginTop->setValue(mg.top());
     this->ui->spinMarginBottom->setValue(mg.bottom());
 }
+
+void MainWindow::on_btnLegendFont_clicked()
+{
+    //图例的字体设置
+    QFont font = this->ui->chartView->chart()->legend()->font();
+    bool ok = false;
+    font = QFontDialog::getFont(&ok, font);
+    if(ok){
+        this->ui->chartView->chart()->legend()->setFont(font);
+    }
+}
+
+void MainWindow::on_radioSeries0_clicked()
+{
+    //获取当前序列数据
+    if(this->ui->radioSeries0->isChecked()){
+        curSeries = (QLineSeries *)this->ui->chartView->chart()->series().at(0);
+    }else{
+        curSeries = (QLineSeries *)this->ui->chartView->chart()->series().at(1);
+    }
+    //获取序列的属性值，并显示到界面上
+    this->ui->editSeriesName->setText(curSeries->name());
+    this->ui->chkSeriesVisible->setChecked(curSeries->isVisible());
+    this->ui->chkPointVisible->setChecked(curSeries->pointsVisible());
+    this->ui->sliderSeriesOpacity->setValue(curSeries->opacity() * 10);
+    this->ui->chkPointLabelVisible->setChecked(curSeries->pointLabelsVisible());
+
+}
+
+void MainWindow::on_radioX_clicked()
+{
+    //获取当前坐标轴
+    if(this->ui->radioX->isChecked()){
+        curAxis = (QValueAxis *)this->ui->chartView->chart()->axisX();
+    }else{
+        curAxis = (QValueAxis *)this->ui->chartView->chart()->axisY();
+    }
+
+    //获取坐标轴的各种属性，显示到界面上
+    this->ui->spinAxisMin->setValue(curAxis->min());
+    this->ui->spinAxisMax->setValue(curAxis->max());
+    this->ui->editAxisTitle->setText(curAxis->titleText());
+    this->ui->chkBoxAxisTitle->setChecked(curAxis->isTitleVisible());
+    this->ui->editAxisLabelFormat->setText(curAxis->labelFormat());
+    this->ui->chkBoxLabelsVisible->setChecked(curAxis->labelsVisible());
+    this->ui->chkGridLineVisible->setChecked(curAxis->isGridLineVisible());
+    this->ui->chkAxisLineVisible->setChecked(curAxis->isLineVisible());
+    this->ui->spinTickCount->setValue(curAxis->tickCount());
+    //this->ui->chkAxisLineVisible->setChecked(curAxis->isLineVisible());
+    this->ui->spinMinorTickCount->setValue(curAxis->minorTickCount());
+    this->ui->chkMinorTickVisible->setChecked(curAxis->isMinorGridLineVisible());
+
+}
+
+void MainWindow::on_btnTickFormat_clicked()
+{
+   //设置坐标抽标签格式
+    curAxis->setLabelFormat(this->ui->editAxisLabelFormat->text());
+}

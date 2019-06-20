@@ -10,18 +10,8 @@ void QWDialogPen::setPen(QPen pen)
     this->ui->comboPenStyle->setCurrentIndex(i);
     QColor color = pen.color();
     this->ui->btnColor->setAutoFillBackground(true);//设置颜色按钮的背景色
-    QString str = QString::asprintf("background-color: rgb(%d, %d, %d);", color.red(), color.green(), color.blue());
+    QString str = QString::asprintf("background-color:rgb(%d, %d, %d);", color.red(), color.green(), color.blue());
     this->ui->btnColor->setStyleSheet(str);
-}
-
-QPen QWDialogPen::getPen()
-{
-    //获得设置的属性
-    m_pen.setStyle(Qt::PenStyle(this->ui->comboPenStyle->currentIndex()));//线型
-    m_pen.setWidth(this->ui->spinWidth->value());//线宽
-    QColor color = this->ui->btnColor->palette().color(QPalette::Button);
-    m_pen.setColor(color);//颜色
-    return m_pen;
 }
 
 QPen QWDialogPen::getPen(QPen iniPen, bool &ok)
@@ -40,6 +30,16 @@ QPen QWDialogPen::getPen(QPen iniPen, bool &ok)
     }
     delete Dlg;//删除对话框对象
     return pen;//返回设置的QPen对象
+}
+
+QPen QWDialogPen::getPen()
+{
+    //获得该行对话框上那个设置的属性
+    m_pen.setStyle(Qt::PenStyle(this->ui->comboPenStyle->currentIndex()));//线形
+    m_pen.setWidth(this->ui->spinWidth->value());//线宽
+    QColor color = this->ui->btnColor->palette().color(QPalette::Button);
+    m_pen.setColor(color);//颜色
+    return m_pen;
 }
 
 

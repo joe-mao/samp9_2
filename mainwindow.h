@@ -16,6 +16,15 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_btnLegendFont_clicked();
+
+    void on_radioSeries0_clicked();
+
+    void on_radioX_clicked();
+
+    void on_btnTickFormat_clicked();
+
 private:
     Ui::MainWindow *ui;
 
